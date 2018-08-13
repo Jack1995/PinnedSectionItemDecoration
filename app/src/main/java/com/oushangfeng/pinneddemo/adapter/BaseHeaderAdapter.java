@@ -36,5 +36,4 @@ public abstract class BaseHeaderAdapter<T extends MultiItemEntity> extends BaseM
         super.onViewAttachedToWindow(holder);
         FullSpanUtil.onViewAttachedToWindow(holder, this, TYPE_HEADER);
     }
-
 }

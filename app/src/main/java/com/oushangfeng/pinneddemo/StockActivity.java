@@ -127,11 +127,11 @@ public class StockActivity extends AppCompatActivity {
 
                 mRecyclerView.addOnItemTouchListener(new OnItemChildClickListener() {
                     @Override
-                    public void SimpleOnItemChildClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
+                    public void onSimpleItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                         if (view instanceof CheckBox) {
                             ((CheckBox) view).setChecked(!((CheckBox) view).isChecked());
-                            mAdapter.getData().get(i).check = ((CheckBox) view).isChecked();
-                            if (mHeaderItemDecoration.getPinnedHeaderView() != null && mHeaderItemDecoration.getPinnedHeaderPosition() >= i + mAdapter
+                            mAdapter.getData().get(position).check = ((CheckBox) view).isChecked();
+                            if (mHeaderItemDecoration.getPinnedHeaderView() != null && mHeaderItemDecoration.getPinnedHeaderPosition() >= position + mAdapter
                                     .getHeaderLayoutCount()) {
                                 ((CheckBox) mHeaderItemDecoration.getPinnedHeaderView().findViewById(view.getId())).setChecked(((CheckBox) view).isChecked());
                             }

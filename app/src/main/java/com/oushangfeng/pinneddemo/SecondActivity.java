@@ -96,17 +96,18 @@ public class SecondActivity extends AppCompatActivity {
 
         mRecyclerView.addOnItemTouchListener(new OnItemChildClickListener() {
             @Override
-            public void SimpleOnItemChildClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
-                PinnedHeaderEntity<Integer> entity = mAdapter.getItem(i);
+            public void onSimpleItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                PinnedHeaderEntity<Integer> entity = mAdapter.getItem(position);
                 switch (view.getId()) {
                     case R.id.iv_small_pinned_header:
                         Toast.makeText(SecondActivity.this, "click tag: " + entity.getPinnedHeaderName(), Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.iv_animal:
-                        Toast.makeText(SecondActivity.this, entity.getPinnedHeaderName() + ", position " + i + ", id " + entity.getData(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SecondActivity.this, entity.getPinnedHeaderName() + ", position " + position + ", id " + entity.getData(), Toast.LENGTH_SHORT).show();
                         break;
                 }
             }
+
         });
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
