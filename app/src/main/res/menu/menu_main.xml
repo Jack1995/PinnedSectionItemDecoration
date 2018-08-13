@@ -27,4 +27,10 @@
         android:orderInCategory="100"
         android:title="小标签demo"
         app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/three_second"
+        android:orderInCategory="100"
+        android:title="3"
+        app:showAsAction="never"/>
 </menu>

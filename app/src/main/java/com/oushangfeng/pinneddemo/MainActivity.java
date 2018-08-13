@@ -183,6 +183,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.to_second:
                 startActivity(new Intent(this, SecondActivity.class));
                 break;
+            case R.id.three_second:
+                startActivity(new Intent(this, Main2Activity.class));
+                break;
         }
 
         return super.onOptionsItemSelected(item);
